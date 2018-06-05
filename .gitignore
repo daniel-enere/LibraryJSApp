@@ -3,3 +3,7 @@ node_modules/
 src/routes/
 
 src/config
+
+src/services
+
+src/controllers
