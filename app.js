@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(session({secret: 'lib'}));
 
-require('./src/config/passport.js')(app);
+require('../src/config/passport.js')(app);
 
 
 // app.use((req, res, next) => {
