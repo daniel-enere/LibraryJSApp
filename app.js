@@ -21,8 +21,8 @@ app.use(session({
   saveUninitialized: false
 }));
 
-const testPath = require('./src/config/passport.js')(app);
-debug("this is to test path", testPath);
+const testPath = require('./src/config/passport.js');
+debug("this is to test path\n", testPath);
 
 // app.use((req, res, next) => {
 //   debug('my middleware');
