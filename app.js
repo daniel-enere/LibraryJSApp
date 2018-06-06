@@ -15,10 +15,14 @@ app.use(morgan('tiny'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(session({secret: 'lib'}));
+app.use(session({
+  secret: 'libFam',
+  resave: false,
+  saveUninitialized: false
+}));
 
-require('../src/config/passport.js')(app);
-
+const testPath = require('./src/config/passport.js')(app);
+debug("this is to test path", testPath);
 
 // app.use((req, res, next) => {
 //   debug('my middleware');
